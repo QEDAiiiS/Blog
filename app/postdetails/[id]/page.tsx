@@ -8,13 +8,17 @@ interface Post {
   body: string;
 }
 
-
-
 // * ==================  POST DETAILS FUNCTION COMPONENT  ==================
-const PostDetails = async ({ params }: { params: { id: string } }) => {
+const PostDetails = async ({
+  params,
+}: {
+  params: Promise<{ productId: string }>;
+}) => {
+  const productId = (await params).productId;
+
   // * ==================  GET POST BY ID  ==================
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${params.id}`,
+    `https://jsonplaceholder.typicode.com/posts/${productId}`,
     {
       next: {
         revalidate: 120,
