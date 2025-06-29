@@ -1,5 +1,7 @@
 import React from "react";
 
+
+ // * =======================  HERO SECTION COMPONENT ======================= 
 export default function Hero() {
   return (
     <div className="max-w-6xl mx-auto mb-12">

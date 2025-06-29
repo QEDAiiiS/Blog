@@ -4,6 +4,9 @@ import Hero from "./Hero";
 import ResentBlogs from "./ResentBlogs";
 import BlogCard from "../components/BlogCard";
 
+
+
+
 // * ==================  POST INTERFACE  ==================
 interface Post {
   id: number;
@@ -11,6 +14,8 @@ interface Post {
   body: string;
 }
 
+
+ // * =======================  IMAGES ARRAY  ======================= 
 const images: string[] = [
   "/img4.png",
   "/img7.png",
@@ -24,9 +29,12 @@ const images: string[] = [
   "/img3.png",
 ];
 
-// * ==================  POSTS FUNCTION COMPONENT  ==================
+
+// * ==================  POSTS PAGE  ==================
 const Posts = async () => {
-  // * ==================  GET 50 POST  ==================
+
+
+  // * ==================  GET 10 POST  ==================
   const res = await fetch(
     "https://jsonplaceholder.typicode.com/posts?_limit=10",
     {
@@ -39,9 +47,15 @@ const Posts = async () => {
 
   return (
     <div className=" container mx-auto">
+
+ {/* // * =======================  HERO SECTION COMPONENT =======================  */}
       <Hero />
+
+ {/* // * =======================  REASENT BLOGS SECTION COMPONENT =======================  */}
       <ResentBlogs />
 
+
+ {/* // * =======================  ALL BLOGS SECTION =======================  */}
       <div className="max-w-6xl mx-auto px-5 ">
         <h1 className="text-xl font-bold my-7">All blog posts</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

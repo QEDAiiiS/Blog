@@ -4,23 +4,27 @@ import React, { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { IoMenu, IoClose } from "react-icons/io5";
 
+// * =======================  NAVBAR COMPONENT =======================
 const Navbar = () => {
   const [menuState, setMenuState] = useState(false);
+
   return (
     <>
       <header className="max-w-6xl mx-auto px-4 transition-all duration-300">
         <nav className=" container mx-auto">
           <div className=" mx-auto flex justify-between min-h-14 items-center ">
+            {/* // * =======================  MY NAME ======================= */}
             <div className="text-xl font-bold">
               <h1>Mahmoud Qedais</h1>
             </div>
 
+            {/* // * =======================  NAVBAR LINKS ======================= */}
             <ul
               className={`
                 gap-4 text-lg transition-all duration-300 z-40 md:bg-transparent
                 ${
                   menuState
-                    ? "flex flex-col fixed top-0 right-0 h-full w-64 p-6 bg-gray-800"
+                    ? "flex flex-col fixed top-0 right-0 h-full w-64 p-6 bg-gray-400 dark:bg-gray-800"
                     : "hidden"
                 }
                 md:flex md:flex-row md:static md:h-auto md:w-auto md:p-0 items-center
@@ -31,16 +35,18 @@ const Navbar = () => {
               <li>Projects</li>
               <li>About</li>
               <li>Newsletter</li>
-              <li>
+              <li className=" mt-2">
                 <ThemeToggle />
               </li>
-            <button className="md:hidden mt-36"
-            onClick={()=>setMenuState(false)}>
-              <IoClose className=" size-8 text-center" />
-            </button>
+              <button
+                className="md:hidden mt-36"
+                onClick={() => setMenuState(false)}
+              >
+                <IoClose className=" size-8 text-center" />
+              </button>
             </ul>
 
-
+            {/* // * =======================  MENU BUTTON ======================= */}
             <button
               className="md:hidden"
               onClick={() => setMenuState(!menuState)}

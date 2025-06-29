@@ -8,13 +8,15 @@ interface Post {
   body: string;
 }
 
-// * ==================  POST DETAILS FUNCTION COMPONENT  ==================
+// * ==================  POST DETAILS PAGE  ==================
 const PostDetails = async ({
   params,
 }: {
   params: Promise<{ productId: string }>;
 }) => {
   const productId = (await params).productId;
+
+
 
   // * ==================  GET POST BY ID  ==================
   const res = await fetch(
@@ -30,6 +32,8 @@ const PostDetails = async ({
   return (
     <div className="max-w-6xl mx-auto px-5 pb-40">
       <div className=" container mx-auto">
+
+{/* // * =======================  DISPLAY POST DETAILS ======================= */}
         <div className="my-7">
           <p className=" text-[var(--date-color)]">Sunday , 1 Jan 2023</p>
           <h1 className=" text-3xl font-bold py-3 ">{post.title}</h1>
@@ -37,6 +41,8 @@ const PostDetails = async ({
           <p className=" text-gray-600 dark:text-gray-400 py-5">{post.body}</p>
         </div>
 
+
+{/* // * =======================  STATIC ARICALS ======================= */}
         <div className="artical w-full my-4 text-center">
           <h3 className="font-bold max-w-2xl mx-auto py-5">
             Definition: A grid is made up of columns, gutters, and margins that

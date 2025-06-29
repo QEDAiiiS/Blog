@@ -4,7 +4,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from 'react-icons/fa'
 
-
+// * =======================  THEME TOGGLE COMPONENT ======================= 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   return (

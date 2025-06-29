@@ -1,14 +1,15 @@
 import React from "react";
 import CardBtn from "./CardBtn";
 
+// * =======================  BLOG CARD COMPONENT =======================
 export default function BlogCard({
   title,
   body,
-  image
+  image,
 }: {
   title: string;
   body: string;
-  image: string
+  image: string;
 }) {
   return (
     <div className="card h-full ">

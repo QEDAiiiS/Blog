@@ -1,5 +1,8 @@
 import React from "react";
 
+
+
+// * =======================  CARD BUTTON COMPONENT =======================
 export default function CardBtn({ title, color }: { title: string, color: string }) {
   const textColor: string  = `var(--${color})`
   return (

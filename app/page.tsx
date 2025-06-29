@@ -1,5 +1,7 @@
 import Posts from "./posts/page";
 
+
+//* =================  HOME PAGE  =================
 export default function Home() {
   return (
     <>
