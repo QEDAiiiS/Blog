@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Hero from "./Hero";
 import ResentBlogs from "./ResentBlogs";
-import BlogCard from "../components/BlogCard";
+import BlogCard from "../_components/BlogCard";
 
 
 
@@ -16,6 +16,7 @@ interface Post {
 
 
  // * =======================  IMAGES ARRAY  ======================= 
+//  Array to display img with Blog card, becaus the API hasn't images
 const images: string[] = [
   "/img4.png",
   "/img7.png",
@@ -51,7 +52,7 @@ const Posts = async () => {
  {/* // * =======================  HERO SECTION COMPONENT =======================  */}
       <Hero />
 
- {/* // * =======================  REASENT BLOGS SECTION COMPONENT =======================  */}
+ {/* // * =======================  RESENT BLOGS SECTION COMPONENT =======================  */}
       <ResentBlogs />
 
 
@@ -59,6 +60,7 @@ const Posts = async () => {
       <div className="max-w-6xl mx-auto px-5 ">
         <h1 className="text-xl font-bold my-7">All blog posts</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+ {/* // * =======================  MAP ON POSTS & IMAGES ARRAY =======================  */}
           {posts.map((post, index) => (
             <div key={post.id} className="my-3">
               <Link href={`/postdetails/${post.id}`}>

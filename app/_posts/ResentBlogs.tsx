@@ -1,5 +1,5 @@
 import React from "react";
-import CardBtn from "../components/CardBtn";
+import CardBtn from "../_components/CardBtn";
 
 // * =======================  RESENT BLOGS COMPONENT =======================
 const ResentBlogs = () => {

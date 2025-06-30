@@ -1,4 +1,4 @@
-import Posts from "./posts/page";
+import Posts from "./_posts/Posts";
 
 
 //* =================  HOME PAGE  =================

@@ -1,4 +1,4 @@
-import CardBtn from "@/app/components/CardBtn";
+import CardBtn from "@/app/_components/CardBtn";
 import React from "react";
 
 // * ==================  POST INTERFACE  ==================
